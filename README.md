@@ -22,35 +22,52 @@ It supports **secure authentication**, **account management**, **fund transfers*
 ## 🏗️ Project Structure
 ```
 NET-BANKING/
-├── backend/                                 # Spring Boot Backend
-│   ├── docker-compose.yml                   # (Lives inside backend)
-│   ├── Dockerfile                           # Backend Docker image
-│   ├── pom.xml                              # Maven build
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/com/netbanking/
-│   │   │   │   ├── controller/             # REST API Controllers
-│   │   │   │   ├── service/                # Business Logic
-│   │   │   │   ├── repository/             # JPA Repositories
-│   │   │   │   ├── entity/                 # Entity Classes
-│   │   │   │   ├── dto/                    # Data Transfer Objects (NEW)
-│   │   │   │   └── security/               # JWT + Security Config
-│   │   │   └── resources/
-│   │   │       └── application.properties
-│   │   └── test/                           # (Optional) Backend tests
-│   └── target/                             # (Generated) Build artifacts
-│
-├── frontend/                                # React + Vite Frontend
-│   ├── Dockerfile                           # Frontend Docker image
-│   ├── package.json                         # Dependencies & scripts
-│   ├── vite.config.ts                       # Vite config
-│   ├── tsconfig.json                        # TypeScript config
-│   ├── .env                                 # VITE_API_BASE_URL, etc. (optional)
+├── backend/                                  # Spring Boot Backend
+│   ├── docker-compose.yml                    # (Compose kept inside backend)
+│   ├── Dockerfile                            # Backend image
+│   ├── pom.xml                               # Maven build
 │   └── src/
-│       ├── components/                      # Reusable UI Components
-│       ├── pages/                           # Login, Register, Dashboard, etc.
-│       ├── services/                        # API calls (Axios wrappers)
-│       └── lib/axios.ts                     # Axios base instance
+│       └── main/
+│           ├── java/com/netbanking/
+│           │   ├── controller/               # REST Controllers
+│           │   ├── service/                  # Business logic
+│           │   ├── repository/               # JPA Repos
+│           │   ├── entity/                   # Entities
+│           │   ├── dto/                      # Data Transfer Objects
+│           │   └── security/                 # JWT + Security config
+│           └── resources/
+│               └── application.properties
 │
-└── README.md                                # Project documentation
-
+├── frontend/                                 # React + Vite Frontend
+│   ├── Dockerfile
+│   ├── .dockerignore
+│   ├── .gitignore
+│   ├── .env                                 
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── README.md
+│   ├── index.html
+│   ├── eslint.config.js
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── tsconfig.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.node.json                   
+│   ├── vite.config.ts                        # Vite config
+│   └── src/
+│       ├── app/                              # App-level routing/layout
+│       ├── assets/                           # Images/fonts
+│       ├── components/                       # Reusable UI components
+│       ├── context/                          # React contexts (Auth etc.)
+│       ├── lib/                              # Libraries
+│       │   └── axios.ts                      # Axios base instance
+│       ├── pages/                            # Login/Register/Dashboard pages
+│       ├── services/                         # services
+│       ├── types/                            # TS types/interfaces
+│       ├── utils/                            # Utility functions
+│       ├── App.css
+│       ├── index.css
+│       └── main.tsx                          # Application entry
+│
+└── README.md                                 # Root project docs
+```
