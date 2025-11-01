@@ -119,3 +119,46 @@ server.port=8080
 ### Frontend Configuration
 
 The frontend is configured to `http://localhost:8080/api` (set in `.env file`).
+
+## 🛠️ API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - User registration
+- `POST /api/auth/login` - User login
+
+### Accounts
+- `POST /api/accounts/create` - Create new account
+- `GET /api/accounts/user` - Get user accounts
+- `GET /api/accounts/{accountNumber}` - Get account by number
+- `DELETE /api/accounts/{accountId}` - Delete account
+
+### Cards
+- `POST /api/cards/create` - Create new card
+- `GET /api/cards/user` - Get user cards
+- `PUT /api/cards/{cardId}/status` - Update card status
+- `DELETE /api/cards/{cardId}` - Delete card
+
+### Transactions
+- `POST /api/transactions/transfer` - Transfer funds
+- `GET /api/transactions/account/{accountId}` - Get account transactions
+- `GET /api/transactions/outgoing/{accountId}` - Get outgoing transactions
+- `GET /api/transactions/incoming/{accountId}` - Get incoming transactions
+
+
+## 🔒 Security Features
+
+- **JWT Authentication**: Secure token-based authentication
+- **Password Encryption**: BCrypt password hashing
+- **CORS Configuration**: Cross-origin resource sharing setup
+- **Input Validation**: Server-side validation for all inputs
+- **SQL Injection Protection**: JPA/Hibernate protection
+- **XSS Protection**: Content Security Policy headers
+
+## 📊 Database Schema
+
+The application automatically creates these tables:
+
+- **users**: User information and credentials
+- **accounts**: Account details and balances
+- **cards**: Card information and status
+- **transactions**: Transaction records and history
