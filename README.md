@@ -69,3 +69,22 @@ NET-BANKING/
 │
 └── README.md                                 # Root project docs
 ```
+
+
+## 🚀 Quick Start (with Docker)
+
+### 🧩 Prerequisites
+- Docker & Docker Compose installed  
+- Git installed  
+
+### ⚙️ Run Application
+```bash
+git clone https://github.com/vaishnavi11P/Net-Banking.git
+cd Net-Banking
+docker-compose up --build
+```
+This command will:
+-Build & run the Spring Boot backend
+-Build & run the React frontend
+-Start a MySQL container with persistent data storage
+
