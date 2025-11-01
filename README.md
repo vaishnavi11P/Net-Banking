@@ -88,3 +88,10 @@ This command will:
 - Build & run the React frontend
 - Start a MySQL container with persistent data storage
 
+## 🌍 Access URLs
+
+| Service     | URL                                     |
+|--------------|------------------------------------------|
+| **Frontend** | [http://localhost:5173](http://localhost:5173) |
+| **Backend API** | [http://localhost:8080/api](http://localhost:8080/api) |
+| **MySQL**    | `localhost:3308` (Database: **netbank**) |
