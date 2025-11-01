@@ -1,0 +1,17 @@
+# Node / React
+node_modules/
+dist/
+.env
+.vite/
+
+# Java / Spring Boot
+target/
+*.log
+*.class
+
+# OS files
+.DS_Store
+
+# Docker
+*.env
+

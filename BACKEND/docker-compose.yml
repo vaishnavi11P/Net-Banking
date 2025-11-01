@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      docker-mysql:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_JSON: '{
+      "spring.datasource.url":"jdbc:mysql://docker-mysql:3306/netbank?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",
+      "spring.datasource.username":"vaish",
+      "spring.datasource.password":"admin123",
+      "spring.jpa.properties.hibernate.dialect":"org.hibernate.dialect.MySQL8Dialect",
+      "spring.jpa.hibernate.ddl-auto":"update"
+      }'
+
+    networks:
+      - my-network-1
+
+  docker-mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_USER: vaish
+      MYSQL_PASSWORD: admin123
+      MYSQL_DATABASE: netbank
+    ports:
+      - "3308:3306"
+    expose:
+      - "3306"
+    networks:
+      - my-network-1
+    volumes:
+      - mysql-netbank-data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-p$${MYSQL_PASSWORD}" ]
+      interval: 10s
+      timeout: 10s
+      retries: 40
+      start_period: 30s
+
+  frontend:
+    build:
+      context: /Users/vaishnavipraveen/netbanking-react
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8080/api
+    networks:
+      - my-network-1
+
+
+networks:
+  my-network-1:
+    driver: bridge
+
+volumes:
+  mysql-netbank-data:

@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* --- Custom helper classes --- */
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.login-container {
+  @apply fixed inset-0 bottom-0 top-14 flex items-center justify-center bg-gray-50;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow p-5;
+}
+
+/* Equal-height helpers */
+.stats-grid {
+  @apply grid gap-4 md:grid-cols-4;
+  grid-auto-rows: 1fr;          /* all items same row height */
+}
+.panel-grid {
+  @apply grid gap-6 md:grid-cols-2;
+  grid-auto-rows: 1fr;
+}
+.card-equal {
+  @apply h-full;                /* make the card fill its grid cell */
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 border;
+}
+
+.btn-primary {
+  @apply bg-black text-white border-black;
+}
+
+.btn-outline {
+  @apply border-gray-300;
+}
+
+.input {
+  @apply w-full rounded-lg border border-gray-300 px-3 py-2;
+}
+
+.label {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full px-3 py-0.5 text-xs font-semibold;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-700;
+}
+
+.table {
+  @apply w-full text-left border-separate border-spacing-y-2;
+}
+
+.table th {
+  @apply text-gray-500 text-xs font-semibold;
+}
+
+.table td {
+  @apply bg-white rounded-lg shadow px-4 py-3;
+}
+
+.header-title {
+  @apply font-bold text-center text-lg text-gray-800 flex-1;
+} 
+
