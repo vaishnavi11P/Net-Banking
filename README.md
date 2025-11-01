@@ -81,19 +81,19 @@ NET-BANKING/
 1️⃣ Clone the repository
 
 2️⃣ Navigate to backend directory (contains docker-compose.yml)
-cd Net-Banking/backend
+- cd Net-Banking/backend
 
 3️⃣ Build and start all containers (backend, frontend, MySQL)
-docker-compose up -d --build
+- docker-compose up -d --build
 
 4️⃣ Check running containers
-docker ps
+- docker ps
 
 5️⃣ View backend logs (optional)
-docker-compose logs -f app
+- docker-compose logs -f app
 
 6️⃣ Stop containers
-docker-compose down
+- docker-compose down
 
 These commands will:
 - Build & run the Spring Boot backend
