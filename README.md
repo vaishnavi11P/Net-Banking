@@ -45,9 +45,7 @@ NET-BANKING/
 │   ├── .env                                 
 │   ├── package.json
 │   ├── package-lock.json
-│   ├── README.md
 │   ├── index.html
-│   ├── eslint.config.js
 │   ├── postcss.config.js
 │   ├── tailwind.config.js
 │   ├── tsconfig.json
