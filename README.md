@@ -84,7 +84,7 @@ cd Net-Banking
 docker-compose up --build
 ```
 This command will:
--Build & run the Spring Boot backend
--Build & run the React frontend
--Start a MySQL container with persistent data storage
+- Build & run the Spring Boot backend
+- Build & run the React frontend
+- Start a MySQL container with persistent data storage
 
