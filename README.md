@@ -95,3 +95,27 @@ This command will:
 | **Frontend** | [http://localhost:5173](http://localhost:5173) |
 | **Backend API** | [http://localhost:8080/api](http://localhost:8080/api) |
 | **MySQL**    | `localhost:3308` (Database: **netbank**) |
+
+## 🔧 Configuration
+
+### Backend Configuration
+
+Key properties in `backend/src/main/resources/application.properties`:
+
+```properties
+# Database
+spring.datasource.url=jdbc:mysql://docker-mysql:3306/netbank
+spring.datasource.username=vaish
+spring.datasource.password=admin123
+
+# JWT
+jwt.secret=netbankingsecretkey2024
+jwt.expiration=86400000
+
+# Server
+server.port=8080
+```
+
+### Frontend Configuration
+
+The frontend is configured to `http://localhost:8080/api` (set in `.env file`).
