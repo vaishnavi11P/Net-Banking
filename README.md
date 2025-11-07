@@ -77,6 +77,8 @@ NET-BANKING/
 - Docker & Docker Compose installed  
 - Git installed
 
+---
+
 ### ⚙️ Run Application
 
 1️⃣ Clone the repository
