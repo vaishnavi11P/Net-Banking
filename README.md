@@ -77,23 +77,6 @@ NET-BANKING/
 - Docker & Docker Compose installed  
 - Git installed
 
-Absolutely ✅ — here’s your **clean, professional GitHub-ready** version of the
-`### ⚙️ Run Application` section, formatted perfectly for your README.md:
-
----
-
-### ⚙️ Run Application
-
-#### 🧩 Prerequisites
-
-Make sure you have:
-
-* **Docker** & **Docker Compose** installed
-* **Java 17+** and **Maven** installed
-* **Git** installed
-
----
-
 ### ⚙️ Run Application
 
 1️⃣ Clone the repository
