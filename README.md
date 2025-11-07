@@ -75,8 +75,73 @@ NET-BANKING/
 
 ### 🧩 Prerequisites
 - Docker & Docker Compose installed  
-- Git installed  
+- Git installed
 
+Absolutely ✅ — here’s your **clean, professional GitHub-ready** version of the
+`### ⚙️ Run Application` section, formatted perfectly for your README.md:
+
+---
+
+### ⚙️ Run Application
+
+#### 🧩 Prerequisites
+
+Make sure you have:
+
+* **Docker** & **Docker Compose** installed
+* **Java 17+** and **Maven** installed
+* **Git** installed
+
+---
+
+### ⚙️ Run Application
+
+1️⃣ Clone the repository
+
+2️⃣ Navigate to backend directory (contains docker-compose.yml)
+- cd Net-Banking/backend
+
+3️⃣ Build the Spring Boot JAR file
+- The Docker Compose setup expects a pre-built JAR inside the backend folder.
+
+```bash
+mvn clean package -DskipTests
+```
+
+📦 This will generate a JAR file inside:
+`backend/target/netbanking-0.0.1-SNAPSHOT.jar`
+
+4️⃣ Update the frontend build context path** in `docker-compose.yml`
+- Inside the `frontend` service section, replace the existing `context` path with your **local frontend folder path**.
+
+For example:
+
+```yaml
+frontend:
+  build:
+    context: ../frontend
+```
+- 📝 If your frontend folder is elsewhere, use its **absolute path** instead.
+
+5️⃣ Build and start all containers (backend, frontend, MySQL)
+- docker-compose up -d --build
+
+6️⃣ Check running containers
+- docker ps
+
+7️⃣ View backend logs (optional)
+- docker-compose logs -f app
+
+8️⃣ Stop containers
+- docker-compose down
+
+
+These commands will:
+- Build & run the Spring Boot backend
+- Build & run the React frontend
+- Start a MySQL container with persistent data storage via docker volumes
+
+```
 ### ⚙️ Run Application
 1️⃣ Clone the repository
 
@@ -99,6 +164,7 @@ These commands will:
 - Build & run the Spring Boot backend
 - Build & run the React frontend
 - Start a MySQL container with persistent data storage
+```
 
 ## 🌍 Access URLs
 
