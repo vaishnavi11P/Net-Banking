@@ -126,31 +126,6 @@ These commands will:
 - Build & run the React frontend
 - Start a MySQL container with persistent data storage via docker volumes
 
-```
-### ⚙️ Run Application
-1️⃣ Clone the repository
-
-2️⃣ Navigate to backend directory (contains docker-compose.yml)
-- cd Net-Banking/backend
-
-3️⃣ Build and start all containers (backend, frontend, MySQL)
-- docker-compose up -d --build
-
-4️⃣ Check running containers
-- docker ps
-
-5️⃣ View backend logs (optional)
-- docker-compose logs -f app
-
-6️⃣ Stop containers
-- docker-compose down
-
-These commands will:
-- Build & run the Spring Boot backend
-- Build & run the React frontend
-- Start a MySQL container with persistent data storage
-```
-
 ## 🌍 Access URLs
 
 | Service     | URL                                     |
